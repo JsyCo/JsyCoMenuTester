@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Study Guide</title>
+    <link rel="stylesheet" href="style.css"> <!-- Make sure this path is correct -->
+<link type="text/css" rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+
+<div class="container">
+    <h1>Menu Study Guide</h1>
+    <form id="menuStudyForm">
+        <div class="section">
+    <label>Select Menu Item:</label>
+    <select id="menuItem" name="menuItem">
+        <option value="emptyPlaceholderItem">--Select An Option--</option>
+        <option value="spicyChicken">Spicy Chicken</option>
+        <option value="jinyaChicken">Jinya Chicken</option>
+        <option value="wontonChicken">Wonton Chicken</option>
+        <option value="tonkotsuBlack">Tonkotsu Black</option>
+        <option value="tonkotsuRed">Tonkotsu Red</option>
+        <option value="tonkotsuOriginal">Tonkotsu Original</option>
+        <option value="spicyUmamiMiso">Spicy Umami Miso</option>
+        <option value="yuzuShioDelight">Yuzu Shio Delight</option>
+        <option value="shrimpWonton">Shrimp Wonton</option>
+        <option value="spicyCreamyVegan">Spicy Creamy Vegan</option>
+        <option value="flyingVeganHarvest">Flying Vegan Harvest</option>
+        <option value="veganRedFireOpal">Vegan Red Fire Opal</option>
+    </select>
+</div>
+
+        <!-- Example for Noodles, as a single choice category -->
+        <div class="section">
+            <label>Noodles</label>
+            <select id="noodles" name="noodles">
+                <option value="emptyPlaceholderNoodles">--Select An Option--</option>
+                <option value="thin noodles">Thin Noodles</option>
+                <option value="thick noodles">Thick Noodles</option>
+                <option value="extra thick noodles">Extra Thick Noodles</option>
+                <!-- Add more noodle options here -->
+            </select>
+        </div>
+
+        <!-- Example for Broth, using checkboxes for multiple selections -->
+        <div class="section">
+    <label>Broth</label>
+    <div class="checkbox-container">
+    <div><input type="checkbox" id="chickenBroth" name="broth" value="chicken broth"><label for="chickenBroth">Chicken Broth</label></div>
+    <div><input type="checkbox" id="porkBroth" name="broth" value="pork broth"><label for="porkBroth">Pork Broth</label></div>
+    <div><input type="checkbox" id="shrimpBroth" name="broth" value="shrimp broth"><label for="shrimpBroth">Shrimp Broth</label></div>
+    <div><input type="checkbox" id="veganVeggieBroth" name="broth" value="vegan veggie broth"><label for="veganVeggieBroth">Vegan Veggie Broth</label></div>
+    <div><input type="checkbox" id="veganMisoBroth" name="broth" value="vegan miso broth"><label for="veganMisoBroth">Vegan Miso Broth</label></div>
+    <div><input type="checkbox" id="yuzuHotAndSourSoup" name="broth" value="yuzu hot and sour soup"><label for="yuzuHotAndSourSoup">Yuzu Hot and Sour Soup</label></div>
+</div>
+
+<div class="section">
+    <label>Protein</label>
+    <div class="checkbox-container">
+    <div><input type="checkbox" id="chickenChashu" name="protein" value="chicken chashu"><label for="chickenChashu">Chicken Chashu 2pc</label></div>
+    <div><input type="checkbox" id="porkChashu" name="protein" value="pork chashu"><label for="porkChashu">Pork Chashu 2pc</label></div>
+    <div><input type="checkbox" id="porkSoboro" name="protein" value="pork soboro"><label for="porkSoboro">Pork Soboro</label></div>
+    <div><input type="checkbox" id="chickenWonton" name="protein" value="chicken wonton"><label for="chickenWonton">Chicken Wonton 5pc</label></div>
+    <div><input type="checkbox" id="shrimpWonton" name="protein" value="shrimp wonton"><label for="shrimpWonton">Shrimp Wonton 5pc</label></div>
+    <div><input type="checkbox" id="shrimpChickenWonton" name="protein" value="shrimp and chicken wonton"><label for="shrimpChickenWonton">Shrimp &amp; Chicken Wonton 5pc</label></div>
+    <div><input type="checkbox" id="egg" name="protein" value="egg"><label for="egg">Egg</label></div>
+    <div><input type="checkbox" id="tofu" name="protein" value="tofu"><label for="tofu">Tofu</label></div>
+    <div><input type="checkbox" id="impossibleMeat" name="protein" value="impossible meat"><label for="impossibleMeat">Impossible Meat</label></div>
+</div>
+
+<div class="section">
+    <label>Veggies</label>
+    <div class="checkbox-container">
+    <div><input type="checkbox" id="spinach" name="veggies" value="spinach"><label for="spinach">Spinach</label></div>
+    <div><input type="checkbox" id="corn" name="veggies" value="corn"><label for="corn">Corn</label></div>
+    <div><input type="checkbox" id="broccolini" name="veggies" value="broccolini"><label for="broccolini">Broccolini</label></div>
+    <div><input type="checkbox" id="bamboo" name="veggies" value="bamboo"><label for="bamboo">Bamboo</label></div>
+    <div><input type="checkbox" id="shitake" name="veggies" value="shitake"><label for="shitake">Shitake</label></div>
+    <div><input type="checkbox" id="cilantro" name="veggies" value="cilantro"><label for="cilantro">Cilantro</label></div>
+    <div><input type="checkbox" id="beanSprouts" name="veggies" value="bean sprouts"><label for="beanSprouts">Bean Sprouts</label></div>
+    <div><input type="checkbox" id="spicyBeanSprouts" name="veggies" value="spicy bean sprouts"><label for="spicyBeanSprouts">Spicy Bean Sprouts</label></div>
+    <div><input type="checkbox" id="bokChoy" name="veggies" value="bok choy"><label for="bokChoy">Bok Choy</label></div>
+    <div><input type="checkbox" id="kikurage" name="veggies" value="kikurage"><label for="kikurage">Kikurage</label></div>
+    <div><input type="checkbox" id="nori" name="veggies" value="nori"><label for="nori">Nori</label></div>
+</div>
+
+<div class="section">
+    <label>Garnish</label>
+    <div class="checkbox-container">
+    <div><input type="checkbox" id="greenOnions" name="garnish" value="green onions"><label for="greenOnions">Green Onions</label></div>
+    <div><input type="checkbox" id="redOnions" name="garnish" value="red onions"><label for="redOnions">Red Onions</label></div>
+    <div><input type="checkbox" id="friedOnions" name="garnish" value="fried onions"><label for="friedOnions">Fried Onions</label></div>
+    <div><input type="checkbox" id="garlicChip" name="garnish" value="garlic chip"><label for="garlicChip">Garlic Chip</label></div>
+    <div><input type="checkbox" id="chiliSeasoning" name="garnish" value="chili seasoning"><label for="chiliSeasoning">Chili Seasoning</label></div>
+    <div><input type="checkbox" id="chiliThread" name="garnish" value="chili thread"><label for="chiliThread">Chili Thread</label></div>
+    <div><input type="checkbox" id="lime" name="garnish" value="lime"><label for="lime">Lime</label></div>
+    <div><input type="checkbox" id="blackPepper" name="garnish" value="black pepper"><label for="blackPepper">Black Pepper</label></div>
+    <div><input type="checkbox" id="sesameSeed" name="garnish" value="sesame seed"><label for="sesameSeed">Sesame Seed</label></div>
+</div>
+
+<div class="section">
+    <label>Oils (if any)</label>
+    <div class="checkbox-container">
+    <div><input type="checkbox" id="blackGarlicOil" name="oils" value="black garlic oil"><label for="blackGarlicOil">Black Garlic Oil</label></div>
+    <div><input type="checkbox" id="sesameOil" name="oils" value="sesame oil"><label for="sesameOil">Sesame Oil</label></div>
+    <div><input type="checkbox" id="shrimpOil" name="oils" value="shrimp oil"><label for="shrimpOil">Shrimp Oil</label></div>
+    <div><input type="checkbox" id="sanchoOil" name="oils" value="sancho oil"><label for="sanchoOil">Sancho Oil</label></div>
+    <div><input type="checkbox" id="chiliOil" name="oils" value="chili oil"><label for="chiliOil">Chili Oil</label></div>
+    <div><input type="checkbox" id="redHotChiliOil" name="oils" value="red hot chili oil"><label for="redHotChiliOil">Red Hot Chili Oil</label></div>
+</div>
+
+        <!-- Placeholder for Veggies, Garnish, Oils with similar structure to Broth -->
+
+        <!-- Levels Section, if applicable -->
+        <div id="levelsSection" class="section" style="display: none;">
+            <label>Spice Level (if applicable)</label>
+            <select id="levels" name="levels">
+                <option value="1">1 - Mild</option>
+                <option value="3">3 - Already Hot</option>
+                <option value="10">10 - Extreme</option>
+                <!-- Add more levels as necessary -->
+            </select>
+        </div>
+
+        <button type="submit">Submit</button>
+        <button type="button" id="resetButton">Reset</button>
+    
+
+
+<!-- Feedback Modal -->
+<div id="feedbackModal" class="modal">
+  <div class="modal-content">
+    <span class="close-button">Close</span>
+    <h2 id="modalHeading">Feedback Title</h2>
+    <p id="modalText">This is your feedback!</p>
+    <p id="JsyText">Text I can put in</p>
+  </div>
+</div>
+
+
+
+<!-- Your custom script file -->
+<script src="script.js"></script> <!-- Make sure this path is correct -->
+<script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>
