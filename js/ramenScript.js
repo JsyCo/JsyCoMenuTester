@@ -34,6 +34,87 @@ document.addEventListener('DOMContentLoaded', function() {
         garnish: ["green onions"],
         oils: [],
         levels: []
+    },
+    tonkotsuBlack: {
+        noodles: ["thin noodles"],
+        broth: ["pork broth"],
+        protein: ["pork chashu", "egg"],
+        veggies: ["kikurage", "nori"],
+        garnish: ["green onions", "fried onions", "garlic chip"],
+        oils: ["black garlic oil"],
+        levels: []
+    },
+    tonkotsuRed: {
+        noodles: ["thick noodles"],
+        broth: ["pork broth"],
+        protein: ["pork chashu", "egg"],
+        veggies: ["kikurage", "nori", "spicy bean sprouts"],
+        garnish: ["green onions"],
+        oils: ["red hot chili oil"],
+        levels: [] // Assuming level "3" means it starts getting hot from here
+    },
+    tonkotsuOriginal: {
+        noodles: ["extra thick noodles"],
+        broth: ["pork broth"],
+        protein: ["pork chashu", "egg"],
+        veggies: ["spinach", "nori"],
+        garnish: ["green onions", "black pepper"],
+        oils: [],
+        levels: []
+    },
+    spicyUmamiMiso: {
+        noodles: ["thick noodles"],
+        broth: ["pork broth"],
+        protein: ["pork soboro"],
+        veggies: ["bean sprouts", "bok choy"],
+        garnish: ["green onions"],
+        oils: ["chili oil", "sancho oil"],
+        levels: []
+    },
+    yuzuShioDelight: {
+        noodles: ["thin noodles"],
+        broth: ["chicken broth", "pork broth"],
+        protein: ["pork chashu", "egg"],
+        veggies: ["spinach", "nori"],
+        garnish: ["green onions"],
+        oils: [],
+        levels: []
+    },
+    shrimpWonton: {
+        noodles: ["thick noodles"],
+        broth: ["pork broth", "shrimp broth"],
+        protein: ["shrimp and chicken wonton"],
+        veggies: ["kikurage"],
+        garnish: ["green onions"],
+        oils: ["shrimp oil"],
+        levels: []
+    },
+    spicyCreamyVegan: {
+        noodles: ["thick noodles"],
+        broth: ["vegan veggie broth"],
+        protein: ["tofu"],
+        veggies: ["spinach"],
+        garnish: ["green onions", "sesame seed", "fried onions", "garlic chip"],
+        oils: ["chili oil", "black garlic oil"],
+        levels: []
+    },
+    flyingVeganHarvest: {
+        noodles: ["thick noodles"],
+        broth: ["vegan miso broth"],
+        protein: ["impossible meat", "tofu"],
+        veggies: ["broccolini", "corn", "bean sprouts"],
+        garnish: ["green onions", "red onions", "garlic chip", "chili seasoning"],
+        oils: ["chili oil", "sancho oil"],
+        levels: []
+    },
+    veganRedFireOpal: {
+        noodles: ["thick noodles"],
+        broth: ["yuzu hot and sour soup"],
+        protein: ["tofu"],
+        veggies: ["bamboo", "shitake", "cilantro"],
+        garnish: ["chili thread", "lime"],
+        oils: ["chili oil"],
+        levels: []
     }
     // Add more dishes here as needed
 };
