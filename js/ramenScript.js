@@ -162,12 +162,12 @@ document.addEventListener('DOMContentLoaded', function() {
         if (isValid) {
             modalHeading.textContent = "Congratulations!";
             modalText.textContent = "Correct! Well done.";
-            JsyText.textContent = "";//could implemnt text here
+            JsyText.textContent = "";
             
         } else {
             modalHeading.textContent = "Incorrect Submission";
             modalText.textContent = "Please review your selections: " + messages.join(" ");
-            JsyText.textContent = "";//could implemnt text here
+            JsyText.textContent = "";
         }
         modal.style.display = "block";
     });
