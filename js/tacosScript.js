@@ -73,11 +73,11 @@ document.addEventListener('DOMContentLoaded', function() {
         if (isValid) {
             modalHeading.textContent = "Congratulations!";
             modalText.textContent = "Correct! Well done.";
-            JsyText.textContent = "Let's go, you got it! ❤";
+            JsyText.textContent = "";//could implemnt text here
         } else {
             modalHeading.textContent = "Incorrect Submission";
             modalText.textContent = "Please review your selections: " + messages.join(", ");
-            JsyText.textContent = "It's okay, you'll get it next time. ❤";
+            JsyText.textContent = "";//could implemnt text here
         }
         modal.style.display = "block";
     });
