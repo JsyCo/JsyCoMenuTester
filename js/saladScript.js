@@ -45,21 +45,30 @@ document.addEventListener('DOMContentLoaded', function() {
         let isValid = true;
         let messages = [];
 
-        // Assuming 'veggies' and 'dressing' are checkboxes and dropdowns respectively
-        // Validate veggies (checkboxes)
+        // Adjusted validation for veggies to ensure no extra veggies are selected
         const selectedVeggies = getSelectedCheckboxValues('veggies');
-        if (dish.veggies && !dish.veggies.every(veggie => selectedVeggies.includes(veggie))) {
-            isValid = false;
-            messages.push("Veggie selection is incorrect.");
+        if (dish.veggies) {
+            const isVeggieValid = dish.veggies.length === selectedVeggies.length && dish.veggies.every(veggie => selectedVeggies.includes(veggie));
+            if (!isVeggieValid) {
+                isValid = false;
+                messages.push("Veggie selection is incorrect.");
+            }
         }
 
-        // Validate dressing (dropdown or checkboxes)
-        const selectedDressing = getSelectedCheckboxValues('dressing'); // Adjust if dressing is a single select dropdown
-        if (dish.dressing && !selectedDressing.every(dressing => dish.dressing.includes(dressing))) {
+        // Adjusted validation for dressing to ensure no extra dressings are selected
+        // This assumes dressings are checkboxes. If it's a single select dropdown, the logic would need to be different.
+        const selectedDressing = getSelectedCheckboxValues('dressing');
+        if (dish.dressing && dish.dressing.length > 0) {
+            const isDressingValid = dish.dressing.length === selectedDressing.length && dish.dressing.every(dressing => selectedDressing.includes(dressing));
+            if (!isDressingValid) {
+                isValid = false;
+                messages.push("Dressing selection is incorrect.");
+            }
+        } else if (dish.dressing.length === 0 && selectedDressing.length > 0) {
+            // If no dressing is required but some are selected
             isValid = false;
             messages.push("Dressing selection is incorrect.");
         }
-
         // Display feedback in modal
         if (isValid) {
             modalHeading.textContent = "Congratulations!";
