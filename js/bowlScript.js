@@ -6,28 +6,27 @@ document.addEventListener('DOMContentLoaded', function() {
     const modalText = document.getElementById('modalText');
     const closeButton = document.querySelector('.close-button');
 
-    // Updated menu items to match your bowls
     const menuItems = {
         porkChashuBowl: {
             carbs: ["White Rice"],
             protein: ["Egg", "Pork Chashu"],
             sauce: ["Pork Chashu Sauce"],
             veggi: ["Kikurage", "Shiitake Mushroom"],
-            garnish: ["Green Onion", "Sesame seed"]
+            garnish: ["Green Onion", "Sesame Seed"]
         },
         chickenChashuBowl: {
             carbs: ["White Rice"],
             protein: ["Chicken Chashu", "Chicken Soboro", "Egg"],
             sauce: ["Buns Sauce"],
             veggi: ["Kikurage", "Shiitake Mushroom"],
-            garnish: ["Green Onion", "Sesame seed"]
+            garnish: ["Green Onion", "Sesame Seed"]
         },
         impossibleBowl: {
             carbs: ["White Rice"],
             protein: ["Imp Meat", "Fried Garbanzo Bean"],
             sauce: ["Lemon Vinaigrette", "Curry Ranch"],
             veggi: ["Pickled Red Cabbage", "Kale"],
-            garnish: ["Pine Nuts", "Crispy garlic"]
+            garnish: ["Pine Nuts", "Crispy Garlic"]
         },
         curryBowl: {
             carbs: ["White Rice"],
@@ -40,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function() {
             carbs: ["White Rice"],
             protein: ["Salmon", "Spicy Tuna", "Shrimp", "Masago"],
             sauce: ["Poke Sauce"],
-            veggi: ["Baby leaf", "Seaweed salad", "Avo", "Cucumber", "Cilantro", "Nori"],
+            veggi: ["Seaweed Salad", "Avo", "Cucumber", "Cilantro", "Nori"],
             garnish: ["Ginger", "Wasabi"]
         }
     };
@@ -66,18 +65,18 @@ document.addEventListener('DOMContentLoaded', function() {
         let isValid = true;
         let messages = [];
 
-        // Iterate over each category in the selected bowl to validate selections
         ['carbs', 'protein', 'sauce', 'veggi', 'garnish'].forEach(category => {
-            const selectedItems = getSelectedCheckboxValues(category);
-            const correctItems = bowl[category];
-            const isCategoryValid = selectedItems.length === correctItems.length && selectedItems.every(item => correctItems.includes(item));
-            if (!isCategoryValid) {
-                isValid = false;
-                messages.push(`${category.charAt(0).toUpperCase() + category.slice(1)} selection is incorrect.`);
+            if (bowl[category]) {
+                const selectedItems = getSelectedCheckboxValues(category);
+                const correctItems = bowl[category];
+                const isCategoryValid = selectedItems.every(item => correctItems.includes(item)) && selectedItems.length === correctItems.length;
+                if (!isCategoryValid) {
+                    isValid = false;
+                    messages.push(`${category.charAt(0).toUpperCase() + category.slice(1)} selection is incorrect.`);
+                }
             }
         });
 
-        // Display feedback in modal
         if (isValid) {
             modalHeading.textContent = "Congratulations!";
             modalText.textContent = "Correct! Well done.";
@@ -88,6 +87,7 @@ document.addEventListener('DOMContentLoaded', function() {
         modal.style.display = "block";
     });
 
+    // Reset functionality
     document.getElementById('resetButton').addEventListener('click', function() {
         document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
             checkbox.checked = false;
