@@ -69,6 +69,17 @@ document.addEventListener('DOMContentLoaded', function() {
             modalText.textContent = "Please review your selections: " + messages.join(" ");
             JsyText.textContent = "It's okay ducky, you'll get it next time. ❤";
         }
+		    // Reset button logic
+		document.getElementById('resetButton').addEventListener('click', function() {
+        // Uncheck all checkboxes
+        document.querySelectorAll('input[type="checkbox"]').forEach((checkbox) => {
+            checkbox.checked = false;
+        });
+
+        // Reset all dropdowns to their first option
+        document.querySelectorAll('select').forEach((select) => {
+            select.selectedIndex = 0;
+        });
         modal.style.display = "block";
     });
 
