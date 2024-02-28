@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bowl Menu Selection</title>
+    <link rel="stylesheet" href="bowlStyle.css">
+<link type="text/css" rel="stylesheet" href="css/bowlStyle.css"/>
+</head>
+<body>
+
+<div class="container">
+    <h1>Bowl Menu Selection</h1>
+    <form id="bowlMenuForm"> <!-- Updated form ID to match the JavaScript -->
+        <div class="section">
+            <label>Select Bowl Type:</label>
+            <select id="bowlType" name="bowlType">
+                <option value="">--Select An Option--</option>
+                <option value="porkChashuBowl">Pork Chashu Bowl</option>
+                <option value="chickenChashuBowl">Chicken Chashu Bowl</option>
+                <option value="impossibleBowl">Impossible Bowl</option>
+                <option value="curryBowl">Curry Bowl</option>
+                <option value="caPokeBowl">CA Poke Bowl</option>
+            </select>
+        </div>
+
+        <!-- Example Section for Carbs -->
+        <div class="section">
+            <label>Carbs</label>
+            <div class="checkbox-container">
+                <input type="checkbox" id="whiteRice" name="carbs" value="White Rice">
+                <label for="whiteRice">White Rice</label>
+            </div>
+        </div>
+        <!-- Protein Section -->
+<div class="section">
+    <label>Protein</label>
+    <div class="checkbox-container">
+        <!-- Common for Pork Chashu and Chicken Chashu Bowls -->
+        <input type="checkbox" id="egg" name="protein" value="Egg">
+        <label for="egg">Egg</label>
+        <!-- Pork Chashu Bowl -->
+        <input type="checkbox" id="porkChashu" name="protein" value="Pork Chashu">
+        <label for="porkChashu">Pork Chashu</label>
+        <!-- Chicken Chashu Bowl -->
+        <input type="checkbox" id="chickenChashu" name="protein" value="Chicken Chashu">
+        <label for="chickenChashu">Chicken Chashu</label>
+        <input type="checkbox" id="chickenSoboro" name="protein" value="Chicken Soboro">
+        <label for="chickenSoboro">Chicken Soboro</label>
+        <!-- Impossible Bowl -->
+        <input type="checkbox" id="impMeat" name="protein" value="Imp Meat">
+        <label for="impMeat">Imp Meat</label>
+        <input type="checkbox" id="friedGarbanzoBean" name="protein" value="Fried Garbanzo Bean">
+        <label for="friedGarbanzoBean">Fried Garbanzo Bean</label>
+        <!-- Curry Bowl -->
+        <input type="checkbox" id="groundChicken" name="protein" value="Ground Chicken">
+        <label for="groundChicken">Ground Chicken</label>
+        <!-- CA Poke Bowl -->
+        <input type="checkbox" id="salmon" name="protein" value="Salmon">
+        <label for="salmon">Salmon</label>
+        <input type="checkbox" id="spicyTuna" name="protein" value="Spicy Tuna">
+        <label for="spicyTuna">Spicy Tuna</label>
+        <input type="checkbox" id="shrimp" name="protein" value="Shrimp">
+        <label for="shrimp">Shrimp</label>
+        <input type="checkbox" id="masago" name="protein" value="Masago">
+        <label for="masago">Masago</label>
+    </div>
+</div>
+
+<!-- Sauce Section -->
+<div class="section">
+    <label>Sauce</label>
+    <div class="checkbox-container">
+        <input type="checkbox" id="porkChashuSauce" name="sauce" value="Pork Chashu Sauce">
+        <label for="porkChashuSauce">Pork Chashu Sauce</label>
+        <input type="checkbox" id="bunsSauce" name="sauce" value="Buns Sauce">
+        <label for="bunsSauce">Buns Sauce</label>
+        <input type="checkbox" id="lemonVinaigrette" name="sauce" value="Lemon Vinaigrette">
+        <label for="lemonVinaigrette">Lemon Vinaigrette</label>
+        <input type="checkbox" id="curryRanch" name="sauce" value="Curry Ranch">
+        <label for="curryRanch">Curry Ranch</label>
+        <input type="checkbox" id="curry" name="sauce" value="Curry">
+        <label for="curry">Curry</label>
+        <input type="checkbox" id="pokeSauce" name="sauce" value="Poke Sauce">
+        <label for="pokeSauce">Poke Sauce</label>
+    </div>
+</div>
+
+<!-- Veggi Section -->
+<div class="section">
+    <label>Veggi</label>
+    <div class="checkbox-container">
+        <input type="checkbox" id="kikurage" name="veggi" value="Kikurage">
+        <label for="kikurage">Kikurage</label>
+        <input type="checkbox" id="shiitakeMushroom" name="veggi" value="Shiitake Mushroom">
+        <label for="shiitakeMushroom">Shiitake Mushroom</label>
+        <input type="checkbox" id="pickledRedCabbage" name="veggi" value="Pickled Red Cabbage">
+        <label for="pickledRedCabbage        <label for="pickledRedCabbage">Pickled Red Cabbage</label>
+        <input type="checkbox" id="kale" name="veggi" value="Kale">
+        <label for="kale">Kale</label>
+        <input type="checkbox" id="babyLeaf" name="veggi" value="Baby Leaf">
+        <label for="babyLeaf">Baby Leaf</label>
+        <!-- CA Poke Bowl Veggies -->
+        <input type="checkbox" id="seaweedSalad" name="veggi" value="Seaweed Salad">
+        <label for="seaweedSalad">Seaweed Salad</label>
+        <input type="checkbox" id="avo" name="veggi" value="Avo">
+        <label for="avo">Avo</label>
+        <input type="checkbox" id="cucumber" name="veggi" value="Cucumber">
+        <label for="cucumber">Cucumber</label>
+        <input type="checkbox" id="cilantro" name="veggi" value="Cilantro">
+        <label for="cilantro">Cilantro</label>
+        <input type="checkbox" id="nori" name="veggi" value="Nori">
+        <label for="nori">Nori</label>
+    </div>
+</div>
+
+<!-- Garnish Section -->
+<div class="section">
+    <label>Garnish</label>
+    <div class="checkbox-container">
+        <input type="checkbox" id="greenOnion" name="garnish" value="Green Onion">
+        <label for="greenOnion">Green Onion</label>
+        <input type="checkbox" id="sesameSeed" name="garnish" value="Sesame Seed">
+        <label for="sesameSeed">Sesame Seed</label>
+        <input type="checkbox" id="pineNuts" name="garnish" value="Pine Nuts">
+        <label for="pineNuts">Pine Nuts</label>
+        <input type="checkbox" id="crispyGarlic" name="garnish" value="Crispy Garlic">
+        <label for="crispyGarlic">Crispy Garlic</label>
+        <!-- CA Poke Bowl Garnishes -->
+        <input type="checkbox" id="ginger" name="garnish" value="Ginger">
+        <label for="ginger">Ginger</label>
+        <input type="checkbox" id="wasabi" name="garnish" value="Wasabi">
+        <label for="wasabi">Wasabi</label>
+    </div>
+</div>
+
+
+        <!-- Placeholder sections for other categories (Protein, Sauce, Veggi, Garnish) -->
+        <!-- Make sure to add checkboxes similar to the Carbs section above for each category -->
+        
+        <button type="submit">Submit</button>
+        <button type="reset" id="resetButton">Reset</button> <!-- Updated button type for reset functionality -->
+    </form>
+</div>
+
+<!-- Feedback Modal -->
+<div id="feedbackModal" class="modal">
+    <div class="modal-content">
+        <span class="close-button">Close</span>
+        <h2 id="modalHeading">Feedback Title</h2>
+        <p id="modalText">This is your feedback!</p>
+    </div>
+</div>
+
+<script src="bowlScript.js"></script> <!-- Make sure this points to your JavaScript file -->
+<script type="text/javascript" src="js/bowlScript.js"></script>
+</body>
+</html>
