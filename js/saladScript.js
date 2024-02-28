@@ -9,7 +9,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const menuItems = {
         seaweedSalad: {
-            veggies: ["baby leaf", "seaweed salad"]
+            veggies: ["baby leaf", "seaweed salad"],
+            dressing: []
+
         },
         houseSalad: {
             veggies: ["baby leaf", "kale", "baby arugula", "cherry tomato"],
@@ -43,19 +45,31 @@ document.addEventListener('DOMContentLoaded', function() {
         let isValid = true;
         let messages = [];
 
-        // Validation logic here (adapted as necessary for your form)
+        // Assuming 'veggies' and 'dressing' are checkboxes and dropdowns respectively
+        // Validate veggies (checkboxes)
+        const selectedVeggies = getSelectedCheckboxValues('veggies');
+        if (dish.veggies && !dish.veggies.every(veggie => selectedVeggies.includes(veggie))) {
+            isValid = false;
+            messages.push("Veggie selection is incorrect.");
+        }
+
+        // Validate dressing (dropdown or checkboxes)
+        const selectedDressing = getSelectedCheckboxValues('dressing'); // Adjust if dressing is a single select dropdown
+        if (dish.dressing && !selectedDressing.every(dressing => dish.dressing.includes(dressing))) {
+            isValid = false;
+            messages.push("Dressing selection is incorrect.");
+        }
 
         // Display feedback in modal
         if (isValid) {
             modalHeading.textContent = "Congratulations!";
             modalText.textContent = "Correct! Well done.";
-            JsyText.textContent = "Let's go, you got it! ❤";
+            JsyText.textContent = "Lets go ducky :D you got it my love ❤";
         } else {
             modalHeading.textContent = "Incorrect Submission";
             modalText.textContent = "Please review your selections: " + messages.join(" ");
-            JsyText.textContent = "It's okay, you'll get it next time. ❤";
+            JsyText.textContent = "Its okay you'll learn it. I still love you c:❤";
         }
-        
         modal.style.display = "block";
     });
 
@@ -69,9 +83,6 @@ document.addEventListener('DOMContentLoaded', function() {
         document.querySelectorAll('select').forEach((select) => {
             select.selectedIndex = 0;
         });
-
-        // Clear any dynamically generated sections if necessary
-        // For example, clearing dynamically added checkboxes or inputs
 
         // Hide the modal if visible
         modal.style.display = 'none';
