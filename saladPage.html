@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Study Guide</title>
+    <link rel="stylesheet" href="saladStyle.css">
+<link type="text/css" rel="stylesheet" href="css/saladStyle.css"/>
+</head>
+<body>
+
+<div class="container">
+    <h1>Salad Menu Study Guide</h1>
+    <form id="menuStudyForm">
+        <div class="section">
+            <label>Select Menu Item:</label>
+            <select id="menuItem" name="menuItem">
+                <option value="">--Select An Option--</option>
+                <option value="seaweedSalad">Seaweed Salad</option>
+                <option value="houseSalad">House Salad</option>
+                <option value="quinoaSalad">Quinoa Salad</option>
+            </select>
+        </div>
+
+        <!-- Section for Veggies -->
+<div class="section">
+    <label>Veggies</label>
+    <div class="checkbox-container">
+        <!-- Example Checkboxes for Veggies -->
+        <input type="checkbox" id="babyLeaf" name="veggies" value="baby leaf">
+        <label for="babyLeaf">Baby Leaf</label>
+
+        <input type="checkbox" id="seaweedSalad" name="veggies" value="seaweed salad">
+        <label for="seaweedSalad">Seaweed Salad</label>
+
+        <input type="checkbox" id="kale" name="veggies" value="kale">
+        <label for="kale">Kale</label>
+
+        <input type="checkbox" id="babyArugula" name="veggies" value="baby arugula">
+        <label for="babyArugula">Baby Arugula</label>
+
+        <input type="checkbox" id="cherryTomato" name="veggies" value="cherry tomato">
+        <label for="cherryTomato">Cherry Tomato</label>
+
+        <input type="checkbox" id="corn" name="veggies" value="corn">
+        <label for="corn">Corn</label>
+
+        <input type="checkbox" id="broccoli" name="veggies" value="broccoli">
+        <label for="broccoli">Broccoli</label>
+
+        <input type="checkbox" id="quinoaBeans" name="veggies" value="quinoa and beans">
+        <label for="quinoaBeans">Quinoa and Beans</label>
+
+    </div>
+</div>
+
+<!-- Section for Dressing -->
+<div class="section">
+    <label>Dressing</label>
+    <div class="checkbox-container">
+        <!-- Example Checkboxes for Dressing -->
+        <input type="checkbox" id="japaneseDressing" name="dressing" value="japanese dressing">
+        <label for="japaneseDressing">Japanese Dressing</label>
+
+        <input type="checkbox" id="sesameDressing" name="dressing" value="sesame dressing">
+        <label for="sesameDressing">Sesame Dressing</label>
+
+    </div>
+</div>
+
+
+        <button type="submit">Submit</button>
+        <button type="button" id="resetButton">Reset</button>
+        <button onclick="window.location.href='index.html';">Home</button>
+    </form>
+</div>
+
+<!-- Feedback Modal -->
+<div id="feedbackModal" class="modal">
+    <div class="modal-content">
+        <span class="close-button">Close</span>
+        <h2 id="modalHeading">Feedback Title</h2>
+        <p id="modalText">This is your feedback!</p>
+        <p id="JsyText">Text I can put in</p>
+    </div>
+</div>
+
+<script src="saladScript.js"></script>
+<script type="text/javascript" src="js/saladScript.js"></script>
+</body>
+</html>
