@@ -1,172 +1,90 @@
-:root {
-    /* Define CSS variables at the root level */
-    --body-bg-color: #3d3b63;
-    --container-bg-color: #ad9acd;
-    --text-color: #333;
-    --text-color-light: #ffffff;
-    --button-bg-color: #3d3b63;
-    --button-bg-color-hover: #2a2850; /* Slightly darker shade for button hover */
-    --checkbox-checked-bg-color: #9a456e;
-    --padding-standard: 0.625rem;
-}
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('menuStudyForm');
+    const menuItemSelect = document.getElementById('menuItem');
+    const modal = document.getElementById('feedbackModal');
+    const modalHeading = document.getElementById('modalHeading');
+    const modalText = document.getElementById('modalText');
+    const JsyText = document.getElementById('JsyText'); // Make sure this ID exists in your HTML
+    const closeButton = document.querySelector('.close-button');
 
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: var(--body-bg-color);
-    margin: 0;
-    padding: var(--padding-standard);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-}
+    const menuItems = {
+        seaweedSalad: {
+            veggies: ["baby leaf", "seaweed salad"],
+            dressing: []
 
-.container {
-    background-color: var(--container-bg-color);
-    padding: var(--padding-standard);
-    border-radius: 0.5rem;
-    box-shadow: 0 0.125rem 0.25rem #0000001a;
-    width: 90%; /* Adjusted for better responsiveness */
-    max-width: 600px; /* Maximum width to maintain layout on larger screens */
-}
+        },
+        houseSalad: {
+            veggies: ["baby leaf", "kale", "baby arugula", "cherry tomato"],
+            dressing: ["japanese dressing"]
+        },
+        quinoaSalad: {
+            veggies: ["baby leaf", "kale", "corn", "broccoli", "quinoa and beans", "cherry tomato"],
+            dressing: ["sesame dressing"]
+        }
+        // Add more dishes here as needed
+    };
 
-.section {
-    margin-bottom: var(--padding-standard);
-}
+    closeButton.addEventListener('click', function() {
+        modal.style.display = "none";
+    });
 
-.section label {
-    font-weight: bold;
-    font-size: 1.125rem;
-    color: var(--text-color);
-    margin-bottom: var(--padding-standard);
-    display: block;
-}
+    window.addEventListener('click', function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    });
 
-.checkbox-container {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-}
-
-.checkbox-container label {
-    background-color: #f8f8f8;
-    margin: 2px;
-    padding: var(--padding-standard);
-    border: 2px solid #ccc;
-    border-radius: 0.25rem;
-    cursor: pointer;
-    transition: background-color 0.3s, color 0.3s;
-    display: inline-flex;
-    align-items: center;
-}
-
-.checkbox-container input[type="checkbox"] {
-    display: none;
-}
-
-.checkbox-container input[type="checkbox"]:checked + label {
-    background-color: var(--checkbox-checked-bg-color);
-    color: var(--text-color-light);
-    border-color: var(--checkbox-checked-bg-color);
-}
-
-select, .checkbox-container label {
-    font-size: 0.875rem;
-    color: var(--text-color);
-}
-
-select option {
-    padding: var(--padding-standard);
-}
-
-button {
-    background-color: var(--button-bg-color);
-    color: var(--text-color-light);
-    padding: var(--padding-standard) 0.9375rem;
-    border: none;
-    border-radius: 0.25rem;
-    cursor: pointer;
-    font-size: 1rem;
-    text-transform: uppercase;
-    transition: background-color 0.3s ease;
-}
-
-button:hover {
-    background-color: var(--button-bg-color-hover);
-}
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: #000000; /* Fallback color */
-    background-color: #00000066; /* Black w/ opacity */
-}
-
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: #000000; /* Fallback color */
-    background-color: #00000066; /* Black w/ opacity */
-}
-
-.modal-content {
-    background-color: #fefefe;
-    margin: 10% auto; /* Adjusted for better positioning on small screens */
-    padding: 20px;
-    padding-bottom: 60px; /* Adjusted padding to save space */
-    border: 1px solid #888;
-    width: 80%; /* Adjusted for better responsiveness */
-    max-width: 300px; /* Control maximum size to avoid overly large modal on bigger screens */
-    position: relative;
-}
-
-.close-button {
-    position: absolute;
-    bottom: 20px; /* Adjust to position inside the modal, at the bottom */
-    left: 50%; /* Center the button horizontally */
-    transform: translateX(-50%); /* Adjust horizontal position to truly center */
-    background-color: #3d3b63; /* Light grey background */
-    color: #ffffff; /* Dark text for contrast */
-    border: none; /* Remove default border */
-    border-radius: 15px; /* Rounded corners for the bubble effect */
-    padding: 10px 20px; /* Padding to increase size and make it more button-like */
-    cursor: pointer; /* Change cursor to pointer to indicate clickable */
-    font-size: 16px; /* Increase font size for visibility */
-}
-
-.close-button:hover{
-    background-color: #2a2850; /* Slightly darker shade on hover/focus for feedback */
-    text-decoration: none; /* No underlining */
-}
-.close-button:focus {
-    background-color: #3d3b63; /* Slightly darker shade on hover/focus for feedback */
-    text-decoration: none; /* No underlining */
-}
-
-
-/* Consider adding media queries for responsive design */
-@media (max-width: 768px) {
-    .modal-content {
-        width: 90%; /* Increase width on smaller screens for better use of space */
-        padding-bottom: 40px; /* Adjust padding for smaller screens */
+    function getSelectedCheckboxValues(name) {
+        return Array.from(document.querySelectorAll(`input[name="${name}"]:checked`)).map(el => el.value);
     }
 
-    .section label, .checkbox-container label, select, button, .close-button {
-        font-size: 0.875rem; /* Adjust font size for readability on small screens */
-    }
+    form.addEventListener('submit', function(event) {
+        event.preventDefault();
+        const selectedDish = menuItemSelect.value;
+        const dish = menuItems[selectedDish];
+        let isValid = true;
+        let messages = [];
 
-    .close-button {
-        padding: 8px 16px; /* Adjust button size for easier interaction on mobile */
-    }
-}
+        // Assuming 'veggies' and 'dressing' are checkboxes and dropdowns respectively
+        // Validate veggies (checkboxes)
+        const selectedVeggies = getSelectedCheckboxValues('veggies');
+        if (dish.veggies && !dish.veggies.every(veggie => selectedVeggies.includes(veggie))) {
+            isValid = false;
+            messages.push("Veggie selection is incorrect.");
+        }
+
+        // Validate dressing (dropdown or checkboxes)
+        const selectedDressing = getSelectedCheckboxValues('dressing'); // Adjust if dressing is a single select dropdown
+        if (dish.dressing && !selectedDressing.every(dressing => dish.dressing.includes(dressing))) {
+            isValid = false;
+            messages.push("Dressing selection is incorrect.");
+        }
+
+        // Display feedback in modal
+        if (isValid) {
+            modalHeading.textContent = "Congratulations!";
+            modalText.textContent = "Correct! Well done.";
+            JsyText.textContent = "Lets go ducky :D you got it my love ❤";
+        } else {
+            modalHeading.textContent = "Incorrect Submission";
+            modalText.textContent = "Please review your selections: " + messages.join(" ");
+            JsyText.textContent = "Its okay you'll learn it. I still love you c:❤";
+        }
+        modal.style.display = "block";
+    });
+
+    document.getElementById('resetButton').addEventListener('click', function() {
+        // Uncheck all checkboxes
+        document.querySelectorAll('input[type="checkbox"]').forEach((checkbox) => {
+            checkbox.checked = false;
+        });
+
+        // Reset all dropdowns to their first option
+        document.querySelectorAll('select').forEach((select) => {
+            select.selectedIndex = 0;
+        });
+
+        // Hide the modal if visible
+        modal.style.display = 'none';
+    });
+});

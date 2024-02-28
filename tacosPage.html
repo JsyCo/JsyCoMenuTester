@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taco Menu Study Guide</title>
+    <link rel="stylesheet" href="style.css">
+<link type="text/css" rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+
+<div class="container">
+    <h1>Taco Menu Study Guide</h1>
+    <form id="menuStudyForm">
+        <div class="section">
+            <label>Select Menu Item:</label>
+            <select id="menuItem" name="menuItem">
+                <option value="">--Select An Option--</option>
+                <option value="salmonTaco">Salmon Taco</option>
+                <option value="spicyTunaTaco">Spicy Tuna Taco</option>
+                <option value="impossibleTaco">Impossible Taco</option>
+            </select>
+        </div>
+        
+    <div class="section">
+        <label>Proteins</label>
+        <div class="checkbox-container">
+            <!-- Example Checkboxes for Proteins -->
+            <input type="checkbox" id="salmon" name="proteins" value="Salmon">
+            <label for="salmon">Salmon</label>
+
+            <input type="checkbox" id="spicyTuna" name="proteins" value="Spicy Tuna">
+            <label for="spicyTuna">Spicy Tuna</label>
+
+            <input type="checkbox" id="masago" name="proteins" value="Masago">
+            <label for="masago">Masago</label>
+
+            <input type="checkbox" id="impMeat" name="proteins" value="Imp Meat">
+            <label for="impMeat">Imp Meat</label>
+        </div>
+    </div>
+
+    <div class="section">
+        <label>Shell Type</label>
+        <div class="checkbox-container">
+            <input type="checkbox" id="wonton" name="shellType" value="Wonton">
+            <label for="wonton">Wonton</label>
+        </div>
+    </div>
+
+    <div class="section">
+        <label>Veggies</label>
+        <div class="checkbox-container">
+            <!-- Example Checkboxes for Veggies -->
+            <input type="checkbox" id="onion" name="veggies" value="Onion">
+            <label for="onion">Onion</label>
+
+            <input type="checkbox" id="tomato" name="veggies" value="Tomato">
+            <label for="tomato">Tomato</label>
+
+            <input type="checkbox" id="cilantro" name="veggies" value="Cilantro">
+            <label for="cilantro">Cilantro</label>
+
+            <input type="checkbox" id="lime" name="veggies" value="Lime">
+            <label for="lime">Lime</label>
+
+            <input type="checkbox" id="guac" name="veggies" value="Guac">
+            <label for="guac">Guac</label>
+        </div>
+    </div>
+
+    <div class="section">
+        <label>Sauces</label>
+        <div class="checkbox-container">
+            <!-- Example Checkboxes for Sauces -->
+            <input type="checkbox" id="pokeSauce" name="sauces" value="Poke Sauce">
+            <label for="pokeSauce">Poke Sauce</label>
+
+            <input type="checkbox" id="bunSauce" name="sauces" value="Bun Sauce">
+            <label for="bunSauce">Bun Sauce</label>
+        </div>
+    </div>
+        
+        <button type="submit">Submit</button>
+        <button type="button" id="resetButton">Reset</button>
+        <button onclick="window.location.href='index.html';">Home</button>
+    </form>
+</div>
+
+<!-- Feedback Modal -->
+<div id="feedbackModal" class="modal">
+    <div class="modal-content">
+        <span class="close-button">Close</span>
+        <h2 id="modalHeading">Feedback Title</h2>
+        <p id="modalText">This is your feedback!</p>
+        <p id="JsyText">Text I can put in</p>
+    </div>
+</div>
+
+<script src="script.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>
