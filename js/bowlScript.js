@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function() {
             carbs: ["White Rice"],
             protein: ["Salmon", "Spicy Tuna", "Shrimp", "Masago"],
             sauce: ["Poke Sauce"],
-            veggi: ["Seaweed Salad", "Avo", "Cucumber", "Cilantro", "Nori"],
+            veggi: ["Seaweed Salad", "Avo", "Baby Leaf", "Cucumber", "Cilantro", "Nori"],
             garnish: ["Ginger", "Wasabi"]
         }
     };
